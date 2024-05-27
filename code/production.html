@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品類別</title>
+    <style>
+        table {
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #000;
+            width: 20%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #000;
+        }
+
+        td:first-child {
+            border-left: none;
+        }
+
+        td:last-child {
+            border-right: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:first-child td {
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" name="form1" method="post" action="page.php">
+        <table>
+            <tr>
+                <td colspan="2">選擇產品類別</td>
+            </tr>
+            <tr>
+                <td>類別：</td>
+                <td>
+                    <select name="choice" id="choice">
+                        <option value="food">好吃、健康</option>
+                        <option value="book">書本</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><a href="cartList.php">結帳去</a>、<a href="login.html">登入</a></p>
+                </td>
+                <td>
+                    <input type="submit" name="button" id="button" value="送出" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
