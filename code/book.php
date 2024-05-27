@@ -36,7 +36,7 @@
 <body>
 	<form id="form1" name="form1" method="post" action="addCar.php">
     <?php
-    $filename = '../word/book.txt';
+    $filename ='../word/book.txt';
 
     if (file_exists($filename)) {
         $fileContent = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -52,7 +52,7 @@
                 echo '<table>';
                 echo '<tr>';
                 if ($imagePath !== false) {
-                    echo '<td colspan="2" class="center"><img src="' . $imagePath . '" alt="' . htmlspecialchars($columns[1]) . '"></td>';
+                    echo '<td colspan="2" class="center"><img src="' . $imagePath . '" alt="' . $columns[1] . '"></td>';
                 } else {
                     echo '<td colspan="2" class="center">找不到圖片</td>';
                 }
@@ -70,7 +70,7 @@
 					echo '</tr>';
 				}
 
-                echo '<tr><td align="center" colspan="2"><button><a href="addCar.php?page=food&id=' . $columns[0] . '">加入購物車</a></button></td></tr>';
+                echo '<tr><td align="center" colspan="2"><button><a href="addCar.php?page=book&id=' . $columns[0] . '">加入購物車</a></button></td></tr>';
                 echo '</table>';
                 echo '</form>';
             }

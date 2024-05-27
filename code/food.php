@@ -36,7 +36,7 @@
 <body>
 	<form id="form1" name="form1" method="post" action="addCar.php">
     <?php
-    $filename = 'food.txt';
+    $filename ='../word/food.txt';
 
     if (file_exists($filename)) {
         $fileContent = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -52,7 +52,7 @@
                 echo '<table>';
                 echo '<tr>';
                 if ($imagePath !== false) {
-                    echo '<td colspan="2" class="center"><img src="' . $imagePath . '" alt="' . htmlspecialchars($columns[1]) . '"></td>';
+                    echo '<td colspan="2" class="center"><img src="' . $imagePath . '" alt="' . $columns[1] . '"></td>';
                 } else {
                     echo '<td colspan="2" class="center">找不到圖片</td>';
                 }
@@ -84,7 +84,7 @@
     function findImage($imageName) {
         $imageFormats = ['jpg', 'png']; 
         foreach ($imageFormats as $format) {
-            $globPattern = 'pics/' . $imageName . '.' . $format;
+            $globPattern = '../pics/' . $imageName . '.' . $format;
             $images = glob($globPattern);
             if (!empty($images)) {
                 return $images[0]; 

@@ -45,8 +45,8 @@ $num = $_SESSION['num'];
 if (!isset($num)) {
     header("Location:login.html");
 } else {
-    $bookFile = 'book.txt';
-    $foodFile = 'food.txt';
+    $bookFile = '../word/book.txt';
+    $foodFile = '../word/food.txt';
 
     $totalBill = 0;
 
