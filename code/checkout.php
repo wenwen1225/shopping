@@ -1,45 +1,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>結帳頁面</title>
-<style>
-        table {
-            margin: 0 auto;
-            text-align: center;
-            border: 1px solid #000;
-            width: 20%;
-            border-collapse: collapse;
-        }
-
-        td {
-            border: 1px solid #000;
-        }
-
-        td:first-child {
-            border-left: none;
-        }
-
-        td:last-child {
-            border-right: none;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:first-child td {
-            border-top: none;
-        }
-        a{
-            text-align: center;
-            display: block;
-        }
-    </style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <?php
 	header("Content-Type:text/html; charset=utf-8");
     session_start();
           
-
     $total = $_SESSION['total'];
     $orderNumber = date('Ymdhm') . rand(10, 99);
 

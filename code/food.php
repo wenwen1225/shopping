@@ -4,34 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>產品列表_食物</title>
-    <style>
-        table {
-            width: 25%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-            border: 1px solid #000;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .center {
-            text-align: center;
-        }
-        .button-container {
-            text-align: center;
-            padding: 10px;
-        }
-        img {
-            max-width: 150px; 
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<form id="form1" name="form1" method="post" action="addCar.php">
@@ -62,7 +35,7 @@
 					echo '<tr>';
 					echo '<td><strong>' . $header[$index] . '</strong></td>';
 
-					if ($header[$index] === '售價：') {
+					if ($header[$index] == '售價：') {
 						echo '<td>' . $column . '元</td>';
 					} else {
 						echo '<td>' . $column . '</td>';

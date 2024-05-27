@@ -3,6 +3,7 @@ session_start();
 if (isset($_GET['page']) && isset($_GET['id'])) {
     $page = $_GET['page'];
     $id = $_GET['id'];
+	
     if (strcmp($page, 'book') == 0) {  
         $book = $_SESSION['book'] ?? array();
         $book[] = $id;
@@ -17,6 +18,6 @@ if (isset($_GET['page']) && isset($_GET['id'])) {
 		header("Location: production.html");
     }
 } else {
-    echo "Error: Missing page or id parameters.";
+    echo "錯誤!";
 }
 ?>

@@ -3,39 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>清單頁面</title>
-<style>
-    table {
-        margin: 0 auto;
-        text-align: center;
-        border: 1px solid #000;
-        width: 30%;
-        border-collapse: collapse;
-    }
-
-    td {
-        border: 1px solid #000;
-    }
-
-    td:first-child {
-        border-left: none;
-    }
-
-    td:last-child {
-        border-right: none;
-    }
-
-    tr:last-child td {
-        border-bottom: none;
-    }
-
-    tr:first-child td {
-        border-top: none;
-    }
-    a{
-        text-align: center;
-        display: block;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <?php
@@ -64,6 +32,7 @@ if (!isset($num)) {
                     $columns = explode(',', $line);
                     if ($item == $columns[0]) {
                         echo "<tr><td>$index</td>";
+						
                         foreach ($columns as $col) {
                             echo "<td>$col</td>";
                         }
@@ -89,6 +58,7 @@ if (!isset($num)) {
                     $columns = explode(',', $line);
                     if ($item == $columns[0]) {
                         echo "<tr><td>$index</td>";
+						
                         foreach ($columns as $col) {
                             echo "<td>$col</td>";
                         }
@@ -105,7 +75,6 @@ if (!isset($num)) {
     }
 
     echo "</table>";
-
     echo "<p style=\"font-size:20px;text-align:center;\">總計： $totalBill 元</p>";
     echo "<a href=\"checkout.php\">確認結帳</a></p>";
 
